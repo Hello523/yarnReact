@@ -3,11 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
-
-import Welcome from './Containers/Welcome';
-import Initialize from './Containers/Initialize';
-import Undefined from './Containers/Undefined';
-
+import DevRouter from './DevRouter'
 
 class App extends React.Component {
 
@@ -21,22 +17,8 @@ class App extends React.Component {
     return (
 
       <HashRouter>
-
-        <div>
-
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/news">About</Link></li>
-          </ul>
-
-          <Switch>
-            <Route exact path="/" component={Welcome} />
-            <Route path="/news" component={Initialize} />
-            <Route component={Undefined} />
-          </Switch>
-
-        </div>
-
+        <DevRouter />
+       
       </HashRouter>
 
     );
@@ -44,6 +26,3 @@ class App extends React.Component {
 }
 
 export default connect((state) => ({}))(App);
-
-
-

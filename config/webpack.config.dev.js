@@ -11,7 +11,7 @@ const eslintFormatter = require('react-dev-utils/eslintFormatter');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const getClientEnvironment = require('./env');
 const paths = require('./paths');
-
+console.log( path.join(process.cwd(), '/src/Containers'),"LLLLLLL")
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
 const publicPath = '/';
@@ -90,8 +90,8 @@ module.exports = {
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
-      'React-ui': path.join(__dirname, '../src/Containers'),
-      'Pages': path.join(__dirname, '../src/pages'),
+      'kr-ui': path.join(process.cwd(), '/src/Containers'),
+      'react-ui': path.join(__dirname, '../src/Components'),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -112,17 +112,12 @@ module.exports = {
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
       {
-        test: /\.(js|jsx)$/,
-        enforce: 'pre',
-        use: [
-          {
-            options: {
-              formatter: eslintFormatter,
-
-            },
-            loader: require.resolve('eslint-loader'),
-          },
-        ],
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        loader: 'babel-loader',
+        query: {
+            presets : ['react' , 'es2015' , 'stage-0'],
+        },
         include: paths.appSrc,
       },
       // ** ADDING/UPDATING LOADERS **

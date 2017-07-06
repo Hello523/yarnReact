@@ -10,7 +10,6 @@ var sagaMiddleware = createSagaMiddleware();
 
 var store = createStore(combineReducers(Reducers), initailState, compose( applyMiddleware(sagaMiddleware)));
 
-console.log('rootSagas',rootSagas);
 
 
 store.runSaga = sagaMiddleware.run;
