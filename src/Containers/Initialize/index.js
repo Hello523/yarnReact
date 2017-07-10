@@ -1,6 +1,8 @@
 import React from 'react';
 
-
+import {
+	Clamp
+} from "react-ui"
 export default class Initialize  extends React.Component{
 	  constructor(props,context){
 		super(props, context);
@@ -136,10 +138,16 @@ export default class Initialize  extends React.Component{
 	}
 
     render() {
-       
+		let label = "实打实的反思反思反思反思尾气污染玩儿玩儿粉色的反思反思反思十分十分十分舒适放松放松的方式的方式发送的方式粉色的反思反思反思反思反思反思的方式发生的放松放松身上的方式适当放松的方式发送方十分舒服放松放松的发生的事飞是是 沙发沙发沙发是多少是都是适当放松的防守对方等等的是反思反思反思反思的适当放松的防守对方是否是"
+		let nn = <span>00</span>
         return (
            <div>
-			   
+			   <div style = {{width:200}}>
+			   <Clamp label = {label} nn = {nn}>
+
+			    <span>00</span>
+				</Clamp>
+			   </div>
 			   <div>
 				   <span>name</span>
 			  	   <input type = 'text' onChange  = {(event) =>{

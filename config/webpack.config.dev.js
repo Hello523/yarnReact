@@ -92,6 +92,7 @@ module.exports = {
       'react-native': 'react-native-web',
       'kr-ui': path.join(process.cwd(), '/src/Containers'),
       'react-ui': path.join(__dirname, '../src/Components'),
+      'Utils': path.join(__dirname, '../src/Utils'),
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
