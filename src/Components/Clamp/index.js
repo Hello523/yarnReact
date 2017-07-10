@@ -25,7 +25,7 @@ export default class Clamp extends React.Component {
                 useNativeClamp : param.useNativeClamp||false,
                 truncationChar : param.useNativeClamp|| "...",
                 animate : param.animate || false,
-                truncationHTML : <span> pp</span>|| "",
+                truncationHTML : "<span> pp</span>"|| "",
                 
             })
     }
