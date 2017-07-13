@@ -1,14 +1,22 @@
+import mobx, {
+	observable,
+	action,
+	asMap,
+	computed,
+	extendObservable
+} from 'mobx';
+import {Message} from 'kr-ui'
+import Http from 'kr/Utils';
 
-import {observable, useStrict, action, computed} from "mobx";
+//全局store
+let State = observable({
+	name: 'dd',
+});
 
+//action
+State.submitVisit = action(function(params,callback) {
+	
+	this.name = "ppp";
+});
 
-class WelComeModel {
-  @observable info = {};
-  @observable birthday = "hello Mobx";
-
-  constructor() {
-  }
-
-}
-
-export default new WelComeModel();
+module.exports = State;

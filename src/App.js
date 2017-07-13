@@ -1,7 +1,4 @@
 import React from 'react';
-
-// import { connect } from 'react-redux';
-
 import { HashRouter, Switch, Route, Link } from 'react-router-dom';
 import DevRouter from './DevRouter'
 
@@ -24,5 +21,3 @@ class App extends React.Component {
     );
   }
 }
-
-// export default connect((state) => ({}))(App);
