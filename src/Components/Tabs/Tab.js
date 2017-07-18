@@ -12,6 +12,7 @@ export default class Tab extends React.Component {
 
 		return (
             <div>
+                这是tab
                 {children}
             </div>
 		);

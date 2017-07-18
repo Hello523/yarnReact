@@ -2,7 +2,8 @@ import React from 'react';
 
 import {
 	Clamp,
-    Tabs
+    Tabs,
+    Tab
 } from "react-ui"
 export default class Initialize  extends React.Component{
 	  constructor(props,context){
@@ -23,7 +24,12 @@ export default class Initialize  extends React.Component{
         return (
            <div>
 		   		<Tabs>
-                   <div>TAbs</div>
+                   <tab label = "nihao">
+                        <div>你好页面</div>
+                   </tab>
+                   <tab label = "world">
+                        <div>world页面</div>
+                   </tab>
 		   		</Tabs>
 		   </div>
         );
