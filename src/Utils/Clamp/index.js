@@ -84,7 +84,6 @@ function clamp(element, options) {
     function getMaxLines(height) {
         var availHeight = height || element.clientHeight,
             lineHeight = getLineHeight(element);
-
         return Math.max(Math.floor(availHeight/lineHeight), 0);
     }
 

@@ -5,6 +5,8 @@
   "dependencies": {
     "immutable": "^3.8.1",
     "material-ui": "^1.0.0-alpha.21",
+    "mobx": "^3.2.1",
+    "mobx-react": "^4.2.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
