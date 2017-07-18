@@ -1,15 +1,13 @@
 import React from 'react';
 
 import {
-	Clamp
+	Clamp,
+    Tabs
 } from "react-ui"
 export default class Initialize  extends React.Component{
 	  constructor(props,context){
 		super(props, context);
-        this.state = {
-            
-
-        }
+      
 	}
 
     componentDidMount(){
@@ -24,7 +22,9 @@ export default class Initialize  extends React.Component{
     render() {
         return (
            <div>
-		   		<input type="text"/>
+		   		<Tabs>
+                   <div>TAbs</div>
+		   		</Tabs>
 		   </div>
         );
     }

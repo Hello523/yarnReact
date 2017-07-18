@@ -1,8 +1,8 @@
-import Clamp from './Clamp';
 import Tabs from './Tabs';
+import Tab from './Tab';
 
 module.exports = {
-	Clamp,
-	...Tabs
+	Tabs,
+    Tab
 }
 
