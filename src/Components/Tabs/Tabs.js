@@ -1,6 +1,6 @@
 import React from 'react';
 import TabTitle from './TabTitle'
-export default class TabCs extends React.Component {
+export default class Tab extends React.Component {
     constructor(props,context){
 		super(props, context);
         this.state = {

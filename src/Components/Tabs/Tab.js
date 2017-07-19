@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class TabC extends React.Component {
+export default class Tab extends React.Component {
 
     componentDidMount(){
 
