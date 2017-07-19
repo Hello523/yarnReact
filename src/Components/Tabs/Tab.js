@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default class Tab extends React.Component {
+export default class TabC extends React.Component {
 
     componentDidMount(){
-       
+
     }
 
 
@@ -12,7 +12,6 @@ export default class Tab extends React.Component {
 
 		return (
             <div>
-                这是tab
                 {children}
             </div>
 		);

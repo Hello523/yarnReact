@@ -1,29 +1,17 @@
 import React from 'react';
-
-export default class Tabs extends React.Component {
+import './index.less';
+export default class TabTitle extends React.Component {
     constructor(props,context){
 		super(props, context);
         this.state = {
            active:0
         }
         const {initStyle, activeStyle} = props;
-        this.init = initStyle||{
-            display:"inline-block",
-            padding:"10px 20px",
-            background:"#ccc",
-
-
-        }
-        this.active = activeStyle || {
-            display:"inline-block",
-            padding:"10px 20px",
-            background:"#ccc",
-            color:"red",
-            
-        }
+        this.init ='ui-init-class ui-tab-control'
+        this.active ='ui-active-class ui-tab-control'
 	}
     componentDidMount(){
-       
+
     }
     titleClick = (label,index) =>{
         this.setState({
@@ -31,7 +19,7 @@ export default class Tabs extends React.Component {
         })
         const {onSubmit} = this.props;
         onSubmit && onSubmit(label,index)
-        
+
     }
     titleRender = () =>{
         const {labels} = this.props;
@@ -39,11 +27,11 @@ export default class Tabs extends React.Component {
         const _this=this;
         let titles = labels.map((item,index)=>{
             let defaultStyel = index == active ? _this.active : _this.init;
-            return (<span key = {index} 
+            return (<span key = {index}
                     onClick = {()=>{
                         this.titleClick(item,index);
                     }}
-                    style = {defaultStyel}
+                    className={defaultStyel}
                     >
                         {item}
                     </span>)
@@ -52,10 +40,10 @@ export default class Tabs extends React.Component {
     }
 	render() {
         const {children,justify} = this.props;
-        
+
 		return (
             <div>
-                 {this.titleRender()}   
+                 {this.titleRender()}
             </div>
 		);
 

@@ -1,16 +1,15 @@
 import React from 'react';
 import TabTitle from './TabTitle'
-export default class Tabs extends React.Component {
+export default class TabCs extends React.Component {
     constructor(props,context){
 		super(props, context);
         this.state = {
             labels : [],
             showIndex:0,
         }
-      
 	}
     componentDidMount(){
-       
+
     }
     getLabels = () =>{
         const {children} = this.props;
@@ -38,16 +37,16 @@ export default class Tabs extends React.Component {
 	render() {
         const {children,initStyle,activeStyle} = this.props;
         const {labels} = this.state;
-        
+
 		return (
             <div>
                 <TabTitle
                     initStyle = {initStyle}
                     activeStyle = {activeStyle}
-                    labels = {this.getLabels()} 
-                    onSubmit = {this.titleClick} 
+                    labels = {this.getLabels()}
+                    onSubmit = {this.titleClick}
                 />
-              
+
                 {this.tabRender()}
             </div>
 		);
