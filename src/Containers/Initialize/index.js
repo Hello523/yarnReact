@@ -24,12 +24,12 @@ export default class Initialize  extends React.Component{
         return (
            <div>
 		   		<Tabs>
-                   <tab label = "nihao">
+                   <Tab label = "nihao">
                         <div>你好页面</div>
-                   </tab>
-                   <tab label = "world">
+                   </Tab>
+                   <Tab label = "world">
                         <div>world页面</div>
-                   </tab>
+                   </Tab>
 		   		</Tabs>
 		   </div>
         );

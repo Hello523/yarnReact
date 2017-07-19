@@ -11,7 +11,7 @@ export default class Tab extends React.Component {
         const {children} = this.props;
 
 		return (
-            <div>
+            <div style = {{background:"red",width:"100%"}}>
                 {children}
             </div>
 		);

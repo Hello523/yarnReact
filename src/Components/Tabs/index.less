@@ -6,3 +6,28 @@
     color:'#4990E2';
     background:url(images/sel_tab.svg) no-repeat center;
 }
+.example-enter {
+   
+    transform: translate(-100%);
+    background: red;
+}
+
+.example-enter.example-enter-active {
+    
+     background: red;
+     transform: translate(0%);
+    transition: all 500ms ease-in;
+}
+
+.example-leave {
+    
+    transform: translate(0%);
+     background: red;
+}
+
+.example-leave.example-leave-active {
+   
+     background: red;
+     transform: translate(100%);
+    transition: all 300ms ease-in;
+}
